@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useId, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
@@ -60,12 +60,14 @@ export const Cover = ({
           scale: hovered ? 0.8 : 1,
           x: hovered ? [0, -30, 30, -30, 30, 0] : 0,
           y: hovered ? [0, 30, -30, 30, -30, 0] : 0,
+          rotate: hovered ? [-2, 2, -2] : -1,
         }}
         exit={{
           filter: "none",
           scale: 1,
           x: 0,
           y: 0,
+          rotate: -1,
         }}
         transition={{
           duration: 0.2,
@@ -84,6 +86,11 @@ export const Cover = ({
           },
           filter: {
             duration: 0.2,
+          },
+          rotate: {
+            duration: 0.3,
+            repeat: hovered ? Infinity : 0,
+            repeatType: "loop",
           },
         }}
         className={cn(
