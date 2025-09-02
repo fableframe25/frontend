@@ -3,18 +3,18 @@ import React, { useEffect, useState } from "react";
 
 export function ServicesCarousel() {
   const services = [
-    { name: "Build Website" },
-    { name: "Maintain Website" },
-    { name: "Deploy Website" },
-    { name: "UI/UX Design" },
-    { name: "Digital Marketing" },
-    { name: "SEO Optimization" },
-    { name: "Performance Testing" },
-    { name: "Security Audits" },
-    { name: "Content Management" },
+    { name: "Website Development" },
+    { name: "Mobile App Development" },
     { name: "E-commerce Solutions" },
-    { name: "Mobile Apps" },
-    { name: "API Development" }
+    { name: "UI/UX Design" },
+    { name: "SEO Optimization" },
+    { name: "Website Maintenance" },
+    { name: "Cloud Deployment" },
+    { name: "Performance Optimization" },
+    { name: "Content Management" },
+    { name: "Digital Marketing" },
+    { name: "API Development" },
+    { name: "Database Design" }
   ];
 
   const [scrollPosition, setScrollPosition] = useState(0);

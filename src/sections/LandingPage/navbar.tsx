@@ -31,7 +31,7 @@ export function NavbarDemo() {
   const [isServicesHovered, setIsServicesHovered] = useState(false);
 
   return (
-    <div className="relative w-full mt-2">
+    <div className="relative w-full">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody className="!bg-black">
