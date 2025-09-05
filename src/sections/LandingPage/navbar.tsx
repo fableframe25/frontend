@@ -35,7 +35,7 @@ export function NavbarDemo() {
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody className="!bg-black">
-          <div className="text-white">
+          <div className="text-white pl-4">
             <NavbarLogo />
           </div>
           
@@ -120,7 +120,7 @@ export function NavbarDemo() {
             </a>
           </div>
           
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 pr-4">
             <NavbarButton variant="secondary" className="text-xs sm:text-sm px-3 sm:px-4 py-2">Login</NavbarButton>
             <NavbarButton variant="primary" className="text-xs sm:text-sm px-3 sm:px-4 py-2">Book a call</NavbarButton>
           </div>
@@ -129,13 +129,15 @@ export function NavbarDemo() {
         {/* Mobile Navigation */}
         <MobileNav className="!bg-black">
           <MobileNavHeader>
-            <div className="text-white">
+            <div className="text-white pl-4">
               <NavbarLogo />
             </div>
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
+            <div className="pr-4">
+              <MobileNavToggle
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
+            </div>
           </MobileNavHeader>
 
           <MobileNavMenu

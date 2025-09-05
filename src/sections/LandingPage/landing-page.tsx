@@ -4,6 +4,8 @@ import { NavbarDemo } from "./navbar";
 import { WhyChooseFableFrame } from "./why-choose-fable-frame";
 import { IndustriesSection } from "./industries-section";
 import { ServicesSection } from "./services";
+import { FAQSection } from "./faq-section";
+import { Footer } from "./footer";
 
 export function LandingPage() {
   return (
@@ -15,6 +17,8 @@ export function LandingPage() {
       <WhyChooseFableFrame />
       <IndustriesSection />
       <ServicesSection />
+      <FAQSection />
+      <Footer />
     </div>
   );
 }
