@@ -8,29 +8,38 @@ export function Footer() {
 
   const socialLinks = [
     {
-      name: "LinkedIn",
-      href: "https://linkedin.com/company/fableframe",
+      name: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=61580545733600",
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12c0 5.148 3.753 9.47 8.682 10.218v-7.29H8.092V12h2.592V9.61c0-2.585 1.579-3.996 3.885-3.996 1.107 0 2.053.081 2.332.117v2.607h-1.55c-1.218 0-1.455.578-1.455 1.428V12h2.89l-.472 2.928h-2.418v7.29C18.247 21.47 22 17.148 22 12c0-5.523-4.477-10-10-10z"/>
         </svg>
       )
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/fableframe",
+      href: "https://www.instagram.com/fableframe_?igsh=MXBnOWJxM24xOTE2Zg==",
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.297-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.807.875 1.297 2.026 1.297 3.323s-.49 2.448-1.297 3.323c-.875.807-2.026 1.297-3.323 1.297zm7.718-1.297c-.875.807-2.026 1.297-3.323 1.297s-2.448-.49-3.323-1.297c-.807-.875-1.297-2.026-1.297-3.323s.49-2.448 1.297-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.807.875 1.297 2.026 1.297 3.323s-.49 2.448-1.297 3.323z"/>
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.685 2 8.243 2.012 6.96 2.073A5.992 5.992 0 0 0 2.074 6.96C2.012 8.243 2 8.685 2 12s.012 3.757.073 5.04a5.992 5.992 0 0 0 4.887 4.887C8.243 21.988 8.685 22 12 22s3.757-.012 5.04-.073a5.992 5.992 0 0 0 4.887-4.887C21.988 15.757 22 15.315 22 12s-.012-3.757-.073-5.04a5.992 5.992 0 0 0-4.887-4.887C15.757 2.012 15.315 2 12 2zM12 4.072c2.903 0 3.268.01 4.41.066a3.928 3.928 0 0 1 3.256 3.256c.056 1.142.066 1.507.066 4.41s-.01 3.268-.066 4.41a3.928 3.928 0 0 1-3.256 3.256c-1.142.056-1.507.066-4.41.066s-3.268-.01-4.41-.066a3.928 3.928 0 0 1-3.256-3.256c-.056-1.142-.066-1.507-.066-4.41s.01-3.268.066-4.41a3.928 3.928 0 0 1 3.256-3.256c1.142-.056 1.507-.066 4.41-.066zm0 2.218a5.71 5.71 0 1 0 0 11.42 5.71 5.71 0 0 0 0-11.42zm0 2.22c2.038 0 3.69 1.652 3.69 3.69s-1.652 3.69-3.69 3.69-3.69-1.652-3.69-3.69 1.652-3.69 3.69-3.69zm5.558-.707a1.31 1.31 0 1 0 0 2.62 1.31 1.31 0 0 0 0-2.62z"/>
+        </svg>
+      )
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/company/fable-frame/",
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.763s.784-1.763 1.75-1.763 1.75.79 1.75 1.763-.784 1.763-1.75 1.763zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
         </svg>
       )
     },
     {
       name: "X (Twitter)",
-      href: "https://x.com/fableframe",
+      href: "https://x.com/fable_frame?t=EKzUnezY4VWL9_51KJDYdw&s=08",
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.244 2.25h3.308l-7.227 8.261 8.502 11.24H16.07l-6.16-8.683L7.5 22.75H4.292l7.182-8.349L6.15 2.25H9.468l5.06 7.463L18.244 2.25zM17.22 20.947H14.15l-4.868-6.936L2.812 2.25H6.126l5.064 6.966L17.22 20.947z"/>
         </svg>
       )
     }
@@ -60,33 +69,30 @@ export function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
             {/* Company Info */}
             <div className="sm:col-span-2 lg:col-span-1">
-              <Link href="/" className="flex items-center space-x-2 mb-3 sm:mb-4 hover:opacity-80 transition-opacity duration-200">
+              <Link href="/" className="flex items-center mb-3 sm:mb-4 hover:opacity-80 transition-opacity duration-200">
                 <Image
-                  src="https://assets.aceternity.com/logo-dark.png"
+                  src="/logo-dark.png"
                   alt="Fable Frame Logo"
-                  width={28}
-                  height={28}
-                  className="rounded sm:w-8 sm:h-8"
+                  width={120}
+                  height={40}
+                  className="rounded"
                 />
-                <span className="text-lg sm:text-xl font-semibold text-gray-900">Fable Frame</span>
               </Link>
               <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                 We build launchpads for your business. Professional web development services 
                 that grab attention, build trust, and drive growth.
               </p>
-              <div className="flex items-center space-x-3 sm:space-x-4">
+              <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-200 transition-colors duration-200"
+                    className="w-6 h-6 text-gray-500 hover:text-gray-900 transition-colors"
                     aria-label={`Follow us on ${social.name}`}
                   >
-                    <div className="w-4 h-4 sm:w-5 sm:h-5">
-                      {social.icon}
-                    </div>
+                    {social.icon}
                   </a>
                 ))}
               </div>
@@ -185,11 +191,8 @@ export function Footer() {
               <a href="/privacy-policy" className="hover:text-gray-900 transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#terms" className="hover:text-gray-900 transition-colors duration-200">
+              <a href="/terms-of-service" className="hover:text-gray-900 transition-colors duration-200">
                 Terms of Service
-              </a>
-              <a href="#cookies" className="hover:text-gray-900 transition-colors duration-200">
-                Cookie Policy
               </a>
             </div>
           </div>

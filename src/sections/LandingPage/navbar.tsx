@@ -1,6 +1,6 @@
 "use client";
 import {
-  Navbar,
+  Navbar as NavbarContainer,
   NavBody,
   MobileNav,
   NavbarLogo,
@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 
-export function NavbarDemo() {
+export default function Navbar() {
   const navItems = [
     {
       name: "Services",
@@ -38,7 +38,7 @@ export function NavbarDemo() {
 
   return (
     <div className="relative w-full">
-      <Navbar>
+      <NavbarContainer>
         {/* Desktop Navigation */}
         <NavBody className="!bg-black">
           <div className="text-white pl-4">
@@ -89,7 +89,7 @@ export function NavbarDemo() {
             ))}
           </MobileNavMenu>
         </MobileNav>
-      </Navbar>
+      </NavbarContainer>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavbarDemo } from "@/sections/LandingPage/navbar";
+import SimpleNavbar from "@/components/ui/simple-navbar";
 import { Footer } from "@/sections/LandingPage/footer";
 import { Metadata } from "next";
 
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
-      <NavbarDemo />
+      <SimpleNavbar />
       
-      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 py-12 sm:py-16 lg:py-20">
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36 pb-12 sm:pb-16 lg:pb-20">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-4">
@@ -84,6 +84,11 @@ export default function PrivacyPolicy() {
                 <li>Payment information (processed securely through third-party payment processors)</li>
                 <li>Communication preferences and correspondence</li>
               </ul>
+              
+              <h3 className="text-xl font-medium text-gray-900 mb-3">2.1.1 Project Ownership</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                <strong>Important:</strong> We do not claim ownership of any projects, websites, applications, or intellectual property created for our clients. All deliverables, including but not limited to website designs, code, content, and branding materials, remain the exclusive property of our clients upon completion and full payment.
+              </p>
 
               <h3 className="text-xl font-medium text-gray-900 mb-3">2.2 Technical Information</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -145,9 +150,27 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
+            {/* Intellectual Property Rights */}
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Intellectual Property Rights</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Fable Frame operates as a service provider and does not retain ownership rights to client projects or deliverables. Our relationship with clients is that of a contractor providing services, not a co-owner or stakeholder in their business ventures.
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+                <li><strong>Client Ownership:</strong> All websites, applications, designs, content, and other deliverables created for clients remain the exclusive property of the client</li>
+                <li><strong>No Residual Rights:</strong> We do not claim any ongoing rights, royalties, or ownership interests in completed projects</li>
+                <li><strong>Work-for-Hire:</strong> All work performed is considered work-for-hire, with full rights transferring to the client upon payment completion</li>
+                <li><strong>Client Data:</strong> Client business data, customer information, and proprietary materials remain confidential and owned by the client</li>
+                <li><strong>Portfolio Rights:</strong> We may request permission to showcase completed work in our portfolio for marketing purposes, but this does not constitute ownership</li>
+              </ul>
+              <p className="text-gray-700 leading-relaxed">
+                This policy ensures that our clients maintain complete control and ownership of their digital assets and business operations.
+              </p>
+            </section>
+
             {/* Data Security */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Data Security</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Data Security</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
               </p>
@@ -165,7 +188,7 @@ export default function PrivacyPolicy() {
 
             {/* Your Rights */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Your Rights and Choices</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Your Rights and Choices</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Depending on your location, you may have the following rights regarding your personal information:
               </p>
@@ -185,7 +208,7 @@ export default function PrivacyPolicy() {
 
             {/* Data Retention */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Data Retention</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Data Retention</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. We will delete or anonymize your information when it is no longer needed.
               </p>
@@ -196,7 +219,7 @@ export default function PrivacyPolicy() {
 
             {/* International Transfers */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. International Data Transfers</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. International Data Transfers</h2>
               <p className="text-gray-700 leading-relaxed">
                 Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards to protect your information.
               </p>
@@ -204,7 +227,7 @@ export default function PrivacyPolicy() {
 
             {/* Children's Privacy */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Children&apos;s Privacy</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Children&apos;s Privacy</h2>
               <p className="text-gray-700 leading-relaxed">
                 Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.
               </p>
@@ -212,7 +235,7 @@ export default function PrivacyPolicy() {
 
             {/* Third-Party Links */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Third-Party Links</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Third-Party Links</h2>
               <p className="text-gray-700 leading-relaxed">
                 Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.
               </p>
@@ -220,7 +243,7 @@ export default function PrivacyPolicy() {
 
             {/* Changes to Privacy Policy */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Changes to This Privacy Policy</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Changes to This Privacy Policy</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by:
               </p>
@@ -236,7 +259,7 @@ export default function PrivacyPolicy() {
 
             {/* Contact Information */}
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Contact Us</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Contact Us</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
               </p>

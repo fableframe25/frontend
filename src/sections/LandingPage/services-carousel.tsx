@@ -1,20 +1,22 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function ServicesCarousel() {
+  // Temporarily commented out - will be re-enabled later
+  return null;
   const services = [
-    { name: "Website Development" },
-    { name: "Mobile App Development" },
-    { name: "E-commerce Solutions" },
-    { name: "UI/UX Design" },
-    { name: "SEO Optimization" },
-    { name: "Website Maintenance" },
-    { name: "Cloud Deployment" },
-    { name: "Performance Optimization" },
-    { name: "Content Management" },
-    { name: "Digital Marketing" },
-    { name: "API Development" },
-    { name: "Database Design" }
+    { name: "Website Development", image: "/service-crusol/shutterstock_394793860-1536x1177.jpg" },
+    { name: "Mobile App Development", image: "/service-crusol/Mobile-Application-Development-Services.png" },
+    { name: "E-commerce Solutions", image: "/service-crusol/E-commerce-solution.jpg" },
+    { name: "UI/UX Design", image: "/service-crusol/ui-ux.jpg" },
+    { name: "SEO Optimization", image: "/service-crusol/content.jpg" },
+    { name: "Website Maintenance", image: "/service-crusol/Website-Maintenance.jpeg" },
+    { name: "Cloud Deployment", image: "/service-crusol/cloud.jpg" },
+    { name: "Performance Optimization", image: "/service-crusol/web-performance-optimization-featured.png" },
+    { name: "Content Management", image: "/service-crusol/content.jpg" },
+    { name: "API Development", image: "/service-crusol/api-development.jpg" },
+    { name: "Database Design", image: "/service-crusol/database_design.webp" }
   ];
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -59,8 +61,14 @@ export function ServicesCarousel() {
             key={`first-${index}`}
             className="inline-flex flex-col items-center mx-2 sm:mx-3 md:mx-4 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-[40%] sm:w-[30%] md:w-[25%] lg:w-[20%] xl:w-[15%]"
           >
-            <div className="w-full aspect-square bg-gray-100 flex items-center justify-center">
-              <div className="text-gray-400 text-lg sm:text-xl md:text-2xl font-bold">{service.name.charAt(0)}</div>
+            <div className="w-full aspect-square relative overflow-hidden">
+              <Image
+                src={service.image}
+                alt={`${service.name} service`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 40vw, (max-width: 768px) 30vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 15vw"
+              />
             </div>
             <div className="p-2 sm:p-3 text-center">
               <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-800 leading-tight">{service.name}</h3>
@@ -74,8 +82,14 @@ export function ServicesCarousel() {
             key={`second-${index}`}
             className="inline-flex flex-col items-center mx-2 sm:mx-3 md:mx-4 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-[40%] sm:w-[30%] md:w-[25%] lg:w-[20%] xl:w-[15%]"
           >
-            <div className="w-full aspect-square bg-gray-100 flex items-center justify-center">
-              <div className="text-gray-400 text-lg sm:text-xl md:text-2xl font-bold">{service.name.charAt(0)}</div>
+            <div className="w-full aspect-square relative overflow-hidden">
+              <Image
+                src={service.image}
+                alt={`${service.name} service`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 40vw, (max-width: 768px) 30vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 15vw"
+              />
             </div>
             <div className="p-2 sm:p-3 text-center">
               <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-800 leading-tight">{service.name}</h3>

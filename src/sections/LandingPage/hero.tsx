@@ -5,7 +5,7 @@ import { ServicesCarousel } from "./services-carousel";
 
 export function CoverDemo() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 pt-36 sm:pt-40 md:pt-44 lg:pt-48 xl:pt-52 overflow-x-hidden">
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36 overflow-x-hidden">
       <div className="text-center w-full max-w-7xl mx-auto">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold max-w-6xl mx-auto text-center relative z-20 py-2 sm:py-3 md:py-4 text-black leading-tight">
           Your online journey starts <br className="hidden sm:block" /> with one click at <Cover>Fable Frame</Cover>
@@ -29,9 +29,14 @@ export function CoverDemo() {
           </a>
           <button 
             onClick={() => {
-              const projectSection = document.getElementById('project-section');
+              const projectSection = document.getElementById('projects');  // Make sure this ID matches your projects section
               if (projectSection) {
-                projectSection.scrollIntoView({ behavior: 'smooth' });
+                projectSection.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'  // This ensures it scrolls to the top of the section
+                });
+              } else {
+                console.log('Projects section not found');  // Debug log if section isn't found
               }
             }}
             className="w-full sm:w-auto bg-white text-gray-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium flex items-center justify-center gap-2 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200 text-sm sm:text-base"
@@ -44,9 +49,6 @@ export function CoverDemo() {
             </div>
           </button>
         </div>
-        
-        {/* Services Carousel */}
-        <ServicesCarousel />
       </div>
     </div>
   );
