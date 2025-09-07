@@ -3,7 +3,7 @@ import { CoverDemo } from "./hero";
 import { NavbarDemo } from "./navbar";
 import { WhyChooseFableFrame } from "./why-choose-fable-frame";
 import { IndustriesSection } from "./industries-section";
-import { ServicesSection } from "./services";
+import ServicesSection from "./services";
 import { ProjectSection } from "./Project";
 import { FAQSection } from "./faq-section";
 import { Footer } from "./footer";

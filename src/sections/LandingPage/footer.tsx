@@ -53,7 +53,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-white text-gray-900">
+    <footer id="contact" className="bg-white text-gray-900">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18">
         {/* Main Footer Content */}
         <div className="py-8 sm:py-12 md:py-16 lg:py-20">

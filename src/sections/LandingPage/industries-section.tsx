@@ -96,7 +96,7 @@ export function IndustriesSection() {
   ];
 
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-white">
+    <section id="industries" className="py-8 sm:py-12 lg:py-16 bg-white">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8 sm:mb-12">
