@@ -7,7 +7,7 @@ export default function TermsOfService() {
     <div className="min-h-screen bg-white">
       <SimpleNavbar />
       
-      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36 pb-12 sm:pb-16 lg:pb-20">
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40 pb-12 sm:pb-16 lg:pb-20">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
         
         <div className="prose prose-lg">
