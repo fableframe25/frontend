@@ -1,6 +1,39 @@
 import React from "react";
 import { NavbarDemo } from "@/sections/LandingPage/navbar";
 import { Footer } from "@/sections/LandingPage/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy - Fable Frame",
+  description: "Learn how Fable Frame protects your privacy and handles your personal information. Our comprehensive privacy policy covers data collection, usage, security, and your rights as a user.",
+  keywords: [
+    "privacy policy",
+    "data protection",
+    "personal information",
+    "privacy rights",
+    "data security",
+    "GDPR compliance",
+    "web development privacy",
+    "Fable Frame privacy"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Privacy Policy - Fable Frame",
+    description: "Learn how Fable Frame protects your privacy and handles your personal information. Our comprehensive privacy policy covers data collection, usage, security, and your rights.",
+    type: "article",
+    url: "https://fableframe.com/privacy-policy",
+  },
+  twitter: {
+    title: "Privacy Policy - Fable Frame",
+    description: "Learn how Fable Frame protects your privacy and handles your personal information.",
+  },
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+};
 
 export default function PrivacyPolicy() {
   return (

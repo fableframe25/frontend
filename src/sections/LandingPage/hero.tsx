@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Cover } from "../../components/ui/cover";
 import { ServicesCarousel } from "./services-carousel";
@@ -13,19 +14,32 @@ export function CoverDemo() {
           We don&apos;t just make websites, we build launchpads for your business. At Fable Frame, every site is crafted to grab attention, build trust, and drive growth—so your first click turns into endless opportunities.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
-          <button className="w-full sm:w-auto bg-black text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium flex items-center justify-center gap-2 shadow-lg hover:bg-gray-800 transition-colors text-sm sm:text-base">
-            Schedule Demo
+          <a 
+            href="https://cal.com/fable-frame-zrqzun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto bg-black text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium flex items-center justify-center gap-2 shadow-lg hover:bg-gray-800 transition-colors text-sm sm:text-base"
+          >
+            Book a Call
             <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-700 rounded-full flex items-center justify-center">
               <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-          </button>
-          <button className="w-full sm:w-auto bg-white text-gray-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium flex items-center justify-center gap-2 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200 text-sm sm:text-base">
-            Get Started Free
+          </a>
+          <button 
+            onClick={() => {
+              const projectSection = document.getElementById('project-section');
+              if (projectSection) {
+                projectSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="w-full sm:w-auto bg-white text-gray-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium flex items-center justify-center gap-2 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200 text-sm sm:text-base"
+          >
+            Our Work
             <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-200 rounded-full flex items-center justify-center">
               <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </div>
           </button>
