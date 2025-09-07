@@ -48,20 +48,20 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://fableframe.com"),
+  metadataBase: new URL("https://fableframe.in"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://fableframe.com",
+    url: "https://fableframe.in",
     title: "Fable Frame - Professional Web Development & Digital Solutions",
     description: "Transform your business with custom website development, e-commerce solutions, and digital services. We create professional, responsive websites that convert visitors into customers.",
     siteName: "Fable Frame",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/fableframe.png",
         width: 1200,
         height: 630,
         alt: "Fable Frame - Professional Web Development Services",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fable Frame - Professional Web Development & Digital Solutions",
     description: "Transform your business with custom website development, e-commerce solutions, and digital services. We create professional, responsive websites that convert visitors into customers.",
-    images: ["/twitter-image.jpg"],
+    images: ["/fableframe.png"],
     creator: "@fableframe",
   },
   robots: {
@@ -106,7 +106,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Fable Frame",
     url: "https://fableframe.com",
-    logo: "https://fableframe.com/logo.png",
+    logo: "https://fableframe.com/fableframe.png",
     description: "Professional web development and digital solutions for small businesses. We create custom websites, e-commerce solutions, and mobile apps that convert visitors into customers.",
     address: {
       "@type": "PostalAddress",
@@ -181,9 +181,9 @@ export default function RootLayout({
         <meta name="application-name" content="Fable Frame" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/fableframe.png" />
+        <link rel="icon" type="image/png" href="/fableframe.png" />
+        <link rel="alternate icon" href="/fableframe.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

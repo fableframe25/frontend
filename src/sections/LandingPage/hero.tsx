@@ -5,7 +5,7 @@ import { ServicesCarousel } from "./services-carousel";
 
 export function CoverDemo() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 pt-16 sm:pt-20 md:pt-24 lg:pt-30 overflow-x-hidden">
+    <div className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 pt-36 sm:pt-40 md:pt-44 lg:pt-48 xl:pt-52 overflow-x-hidden">
       <div className="text-center w-full max-w-7xl mx-auto">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold max-w-6xl mx-auto text-center relative z-20 py-2 sm:py-3 md:py-4 text-black leading-tight">
           Your online journey starts <br className="hidden sm:block" /> with one click at <Cover>Fable Frame</Cover>

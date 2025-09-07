@@ -137,22 +137,22 @@ export function FAQSection() {
               and discuss how we can help grow your business online.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center items-center">
-              <button className="w-full sm:w-auto bg-black text-white px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg hover:bg-gray-800 transition-colors text-xs sm:text-sm md:text-base">
+              <a href="mailto:contact@fableframe.in" className="w-full sm:w-auto bg-black text-white px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg hover:bg-gray-800 transition-colors text-xs sm:text-sm md:text-base">
                 Contact Us Now
                 <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-gray-700 rounded-full flex items-center justify-center">
                   <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-              </button>
-              <button className="w-full sm:w-auto bg-white text-gray-700 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-semibold flex items-center justify-center gap-2 border border-gray-300 hover:bg-gray-50 transition-colors text-xs sm:text-sm md:text-base">
+              </a>
+              <a href="https://cal.com/fable-frame-zrqzun" className="w-full sm:w-auto bg-white text-gray-700 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-semibold flex items-center justify-center gap-2 border border-gray-300 hover:bg-gray-50 transition-colors text-xs sm:text-sm md:text-base">
                 Schedule Consultation
                 <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-gray-200 rounded-full flex items-center justify-center">
                   <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
-              </button>
+              </a>
             </div>
           </div>
         </div>

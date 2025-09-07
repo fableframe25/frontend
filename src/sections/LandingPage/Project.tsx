@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import { EvervaultCard } from "@/components/ui/evervault-card";
+import Image from "next/image";
 
 interface Project {
   title: string;
   description: string;
   link: string;
   category: string;
+  image: string;
 }
 
 export function ProjectSection() {
@@ -15,19 +16,22 @@ export function ProjectSection() {
       title: "Content Catalyst",
       description: "AI-powered content creation platform with 30+ templates for blogs, social media, and more. Features comprehensive history & billing management.",
       link: "https://content-catalyst.vercel.app/",
-      category: "AI Content"
+      category: "AI Content",
+      image: "/Project/aicontent.png"
     },
     {
       title: "Edu Empower",
       description: "Educational empowerment platform designed to enhance learning experiences and student engagement through innovative digital solutions.",
       link: "https://edu-empower-rho.vercel.app/",
-      category: "Education"
+      category: "Education",
+      image: "/Project/edu-empower.png"
     },
     {
-      title: "Miranda Portfolio",
-      description: "Elegant paper-style portfolio showcasing creative design and professional presentation with modern aesthetics and smooth interactions.",
-      link: "https://akash202004.github.io/miranda-paper-portfolio/",
-      category: "Portfolio"
+      title: "Tickity",
+      description: "Modern event management platform with seamless ticket booking, real-time updates, and comprehensive event organization tools for organizers and attendees.",
+      link: "https://tickity-delta.vercel.app/",
+      category: "Event Management",
+      image: "/Project/tickity.png"
     }
   ];
 
@@ -51,14 +55,15 @@ export function ProjectSection() {
               key={index}
               className="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
-              {/* Evervault Card Section */}
-              <div className="h-48 sm:h-52 bg-green-100 flex items-center justify-center p-4">
-                <div className="w-full h-full">
-                  <EvervaultCard
-                    text={project.category}
-                    className="w-full h-full"
-                  />
-                </div>
+              {/* Project Image Section */}
+              <div className="h-48 sm:h-52 relative overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} - ${project.category}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
               </div>
               
               {/* Content Section */}

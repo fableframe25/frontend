@@ -9,17 +9,17 @@ export default function manifest() {
     theme_color: '#000000',
     icons: [
       {
-        src: '/favicon.ico',
+        src: '/fableframe.png',
         sizes: 'any',
-        type: 'image/x-icon',
+        type: 'image/png',
       },
       {
-        src: '/icon-192x192.png',
+        src: '/fableframe.png',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: '/icon-512x512.png',
+        src: '/fableframe.png',
         sizes: '512x512',
         type: 'image/png',
       },

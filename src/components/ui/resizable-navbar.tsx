@@ -235,15 +235,15 @@ export const NavbarLogo = () => {
   return (
     <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center px-2 py-1"
     >
       <Image
-        src="https://assets.aceternity.com/logo-dark.png"
-        alt="logo"
-        width={30}
-        height={30}
+        src="/fableframe.png"
+        alt="Fable Frame Logo"
+        width={60}
+        height={60}
+        className="object-contain"
       />
-      <span className="font-medium text-black dark:text-white">Fable Frame</span>
     </Link>
   );
 };
