@@ -62,10 +62,10 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         <MobileNav className="!bg-black">
           <MobileNavHeader>
-            <div className="text-white pl-4">
+            <div className="text-white pl-3">
               <NavbarLogo />
             </div>
-            <div className="pr-4">
+            <div className="pr-3">
               <MobileNavToggle
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

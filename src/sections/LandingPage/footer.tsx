@@ -46,9 +46,9 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Home", href: "#" },
     { name: "Services", href: "#services" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Industries", href: "#industries" },
+    { name: "Projects", href: "#projects" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" }
   ];
