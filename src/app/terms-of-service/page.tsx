@@ -1,6 +1,45 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import SimpleNavbar from "@/components/ui/simple-navbar";
 import { Footer } from "@/sections/LandingPage/footer";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Fable Frame",
+  description:
+    "Read Fable Frame's Terms of Service covering our web development, UI/UX, SEO, and maintenance services, payment terms, IP rights, and contact details.",
+  keywords: [
+    "Fable Frame",
+    "Terms of Service",
+    "ToS",
+    "web development",
+    "UI/UX design",
+    "SEO services",
+    "digital marketing",
+    "software maintenance",
+  ],
+  alternates: {
+    canonical: "https://www.fableframe.in/terms-of-service",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://www.fableframe.in/terms-of-service",
+    title: "Terms of Service | Fable Frame",
+    description:
+      "Fable Frame Terms of Service: scope of services, payments, IP rights, limitations, and contact information.",
+    siteName: "Fable Frame",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Fable Frame",
+    description:
+      "Read Fable Frame's Terms of Service covering services, payments, IP, and more.",
+    creator: "@fableframe",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TermsOfService() {
   return (
@@ -11,6 +50,43 @@ export default function TermsOfService() {
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
         
         <div className="prose prose-lg">
+          {/* Structured data: WebPage and Breadcrumbs for SEO */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                name: "Terms of Service | Fable Frame",
+                url: "https://www.fableframe.in/terms-of-service",
+                description:
+                  "Read Fable Frame's Terms of Service covering our web development, UI/UX, SEO, and maintenance services.",
+                lastReviewed: "2025-09-08",
+                breadcrumb: {
+                  "@type": "BreadcrumbList",
+                  itemListElement: [
+                    {
+                      "@type": "ListItem",
+                      position: 1,
+                      name: "Home",
+                      item: "https://www.fableframe.in/",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 2,
+                      name: "Terms of Service",
+                      item: "https://www.fableframe.in/terms-of-service",
+                    },
+                  ],
+                },
+                publisher: {
+                  "@type": "Organization",
+                  name: "Fable Frame",
+                  url: "https://www.fableframe.in/",
+                },
+              }),
+            }}
+          />
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
             <p className="text-gray-600 mb-4">
