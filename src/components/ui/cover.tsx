@@ -38,8 +38,8 @@ export const Cover = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       ref={ref}
-      className="relative group/cover inline-block px-2 py-2 transition duration-200 rounded-sm"
-      style={{ backgroundColor: '#37f713' }}
+      className="relative group/cover inline-block px-2 py-2 transition duration-200 rounded-sm bg-green-500"
+      style={{ backgroundColor: '' }}
     >
 
       {beamPositions.map((position, index) => (

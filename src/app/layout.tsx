@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import NavbarWrapper from "@/components/navbar-wrapper";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,10 +17,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fable Frame - Professional Web Development & Digital Solutions for Small Businesses",
-    template: "%s | Fable Frame"
+    default:
+      "Fable Frame - Professional Web Development & Digital Solutions for Small Businesses",
+    template: "%s | Fable Frame",
   },
-  description: "Transform your business with custom website development, e-commerce solutions, and digital services. Fable Frame creates professional, responsive websites that convert visitors into customers. Serving automotive, healthcare, education, finance, and more industries.",
+  description:
+    "Transform your business with custom website development, e-commerce solutions, and digital services. Fable Frame creates professional, responsive websites that convert visitors into customers. Serving automotive, healthcare, education, finance, and more industries.",
   keywords: [
     "web development",
     "website design",
@@ -39,7 +43,7 @@ export const metadata: Metadata = {
     "education websites",
     "finance websites",
     "professional web design",
-    "affordable web solutions"
+    "affordable web solutions",
   ],
   authors: [{ name: "Fable Frame" }],
   creator: "Fable Frame",
@@ -58,7 +62,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://fableframe.in",
     title: "Fable Frame - Professional Web Development & Digital Solutions",
-    description: "Transform your business with custom website development, e-commerce solutions, and digital services. We create professional, responsive websites that convert visitors into customers.",
+    description:
+      "Transform your business with custom website development, e-commerce solutions, and digital services. We create professional, responsive websites that convert visitors into customers.",
     siteName: "Fable Frame",
     images: [
       {
@@ -72,7 +77,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Fable Frame - Professional Web Development & Digital Solutions",
-    description: "Transform your business with custom website development, e-commerce solutions, and digital services. We create professional, responsive websites that convert visitors into customers.",
+    description:
+      "Transform your business with custom website development, e-commerce solutions, and digital services. We create professional, responsive websites that convert visitors into customers.",
     images: ["/fableframe.png"],
     creator: "@fableframe",
   },
@@ -108,60 +114,64 @@ export default function RootLayout({
     name: "Fable Frame",
     url: "https://fableframe.com",
     logo: "https://fableframe.com/fableframe.png",
-    description: "Professional web development and digital solutions for small businesses. We create custom websites, e-commerce solutions, and mobile apps that convert visitors into customers.",
+    description:
+      "Professional web development and digital solutions for small businesses. We create custom websites, e-commerce solutions, and mobile apps that convert visitors into customers.",
     address: {
       "@type": "PostalAddress",
-      addressCountry: "US"
+      addressCountry: "US",
     },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-XXX-XXX-XXXX",
       contactType: "customer service",
-      availableLanguage: "English"
+      availableLanguage: "English",
     },
     sameAs: [
       "https://twitter.com/fableframe",
       "https://linkedin.com/company/fableframe",
-      "https://instagram.com/fableframe"
+      "https://instagram.com/fableframe",
     ],
     offers: [
       {
         "@type": "Service",
         name: "Custom Website Development",
-        description: "Professional custom website development for small businesses",
+        description:
+          "Professional custom website development for small businesses",
         provider: {
           "@type": "Organization",
-          name: "Fable Frame"
-        }
-      },
-      {
-        "@type": "Service", 
-        name: "E-commerce Development",
-        description: "Complete e-commerce solutions with seamless checkout experiences",
-        provider: {
-          "@type": "Organization",
-          name: "Fable Frame"
-        }
+          name: "Fable Frame",
+        },
       },
       {
         "@type": "Service",
-        name: "Mobile App Development", 
+        name: "E-commerce Development",
+        description:
+          "Complete e-commerce solutions with seamless checkout experiences",
+        provider: {
+          "@type": "Organization",
+          name: "Fable Frame",
+        },
+      },
+      {
+        "@type": "Service",
+        name: "Mobile App Development",
         description: "Custom mobile applications for iOS and Android",
         provider: {
           "@type": "Organization",
-          name: "Fable Frame"
-        }
+          name: "Fable Frame",
+        },
       },
       {
         "@type": "Service",
         name: "SEO Optimization",
-        description: "Search engine optimization services to improve online visibility",
+        description:
+          "Search engine optimization services to improve online visibility",
         provider: {
           "@type": "Organization",
-          name: "Fable Frame"
-        }
-      }
-    ]
+          name: "Fable Frame",
+        },
+      },
+    ],
   };
 
   return (
@@ -172,7 +182,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="dns-prefetch" href="https://cal.com" />
         <meta name="theme-color" content="#000000" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -188,10 +202,13 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         <div className="flex flex-col min-h-screen">
           <NavbarWrapper />
           <div className="flex-1">
+            <Analytics />
+            <SpeedInsights />
             {children}
           </div>
         </div>

@@ -55,7 +55,7 @@ export function FAQSection() {
             <div
               key={index}
               className={`rounded-2xl border-2 border-black overflow-hidden transition-all duration-300 ${
-                openIndex === index ? 'bg-[#37f713]' : 'bg-white'
+                openIndex === index ? 'bg-green-500' : 'bg-white'
               }`}
             >
               <button
@@ -127,12 +127,12 @@ export function FAQSection() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-8 sm:mt-12 md:mt-16">
-          <div className="bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 p-4 sm:p-6 md:p-8">
-            <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4">
+        <div className="text-center mt-8 sm:mt-12 md:mt-16 rounded-2xl p-6 sm:p-8 md:p-10">
+          <div className="bg-green-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border-black border-2">
+            <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white mb-3 sm:mb-4">
               Still have questions?
             </h3>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-4 sm:mb-6 max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm md:text-base text-white mb-4 sm:mb-6 max-w-2xl mx-auto">
               Our team is here to help! Contact us directly and we&apos;ll answer all your questions 
               and discuss how we can help grow your business online.
             </p>

@@ -9,9 +9,8 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
-
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -53,16 +52,21 @@ interface MobileNavMenuProps {
 
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
   const { scrollY } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
   const [visible, setVisible] = useState<boolean>(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
+    if (mounted && latest > 100) {
       setVisible(true);
-    } else {
+    } else if (mounted) {
       setVisible(false);
     }
   });
@@ -77,15 +81,22 @@ export const Navbar = ({ children, className }: NavbarProps) => {
         React.isValidElement(child)
           ? React.cloneElement(
               child as React.ReactElement<{ visible?: boolean }>,
-              { visible },
+              // Only pass visible prop if the component explicitly accepts it
+              child.type === NavBody || child.type === MobileNav
+                ? { visible }
+                : {}
             )
-          : child,
+          : child
       )}
     </motion.div>
   );
 };
 
-export const NavBody = ({ children, className, visible }: NavBodyProps) => {
+export const NavBody = ({
+  children,
+  className,
+  visible = false,
+}: NavBodyProps) => {
   return (
     <motion.div
       animate={{
@@ -108,7 +119,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
         visible && "bg-white/80 dark:bg-neutral-950/80",
-        className,
+        className
       )}
     >
       {children}
@@ -124,7 +135,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       onMouseLeave={() => setHovered(null)}
       className={cn(
         "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
-        className,
+        className
       )}
     >
       {items.map((item, idx) => (
@@ -148,7 +159,11 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   );
 };
 
-export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
+export const MobileNav = ({
+  children,
+  className,
+  visible = false,
+}: MobileNavProps) => {
   return (
     <motion.div
       animate={{
@@ -170,7 +185,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-1 lg:hidden rounded-3xl",
         visible && "bg-white/80 dark:bg-neutral-950/80",
-        className,
+        className
       )}
     >
       {children}
@@ -186,7 +201,7 @@ export const MobileNavHeader = ({
     <div
       className={cn(
         "flex w-full flex-row items-center justify-between py-1",
-        className,
+        className
       )}
     >
       {children}
@@ -198,7 +213,7 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-}: Omit<MobileNavMenuProps, 'onClose'>) => {
+}: Omit<MobileNavMenuProps, "onClose">) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -207,11 +222,11 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
-            className,
+            "fixed top-8 left-0 right-0 z-50 mx-auto max-w-md flex flex-col items-center justify-start gap-4 rounded-2xl bg-white py-4 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950 border-t border-gray-700",
+            className
           )}
         >
-          {children}
+          <div className="px-2 w-full">{children}</div>
         </motion.div>
       )}
     </AnimatePresence>
@@ -234,10 +249,7 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <Link
-      href="/"
-      className="relative z-20 mr-4 flex items-center px-2 py-1"
-    >
+    <Link href="/" className="relative z-20 mr-4 flex items-center px-2 py-1">
       <Image
         src="/fableframe.png"
         alt="Fable Frame Logo"

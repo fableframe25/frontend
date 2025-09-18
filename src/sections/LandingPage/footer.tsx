@@ -46,11 +46,11 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Industries", href: "#industries" },
-    { name: "Projects", href: "#projects" },
     { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" }
+    { name: "Industries", href: "#industries" },
+    { name: "Services", href: "#services" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "/contact" }
   ];
 
   const services = [

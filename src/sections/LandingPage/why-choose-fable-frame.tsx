@@ -6,19 +6,22 @@ export function WhyChooseFableFrame() {
   const features = [
     {
       title: "Affordable Excellence",
-      description: "We deliver premium web development services at startup-friendly prices. Get enterprise-quality websites without the enterprise price tag - perfect for small businesses and individuals.",
-      image: "/why-fableframe/web.jpg"
+      description:
+        "We deliver premium web development services at startup-friendly prices. Get enterprise-quality websites without the enterprise price tag - perfect for small businesses and individuals.",
+      image: "/why-fableframe/1.jpg",
     },
     {
       title: "Fast Turnaround Times",
-      description: "We understand that time is money for small businesses. Our streamlined process ensures quick delivery without compromising quality - get your website up and running in record time.",
-      image: "/why-fableframe/fast.jpg"
+      description:
+        "We understand that time is money for small businesses. Our streamlined process ensures quick delivery without compromising quality - get your website up and running in record time.",
+      image: "/why-fableframe/ttt.png",
     },
     {
       title: "Ongoing Support & Growth",
-      description: "We don't just build your website and leave. Our team provides continuous support, maintenance, and optimization to help your business grow and adapt to changing market needs.",
-      image: "/why-fableframe/growth.jpg"
-    }
+      description:
+        "We don't just build your website and leave. Our team provides continuous support, maintenance, and optimization to help your business grow and adapt to changing market needs.",
+      image: "/why-fableframe/dd.png",
+    },
   ];
 
   return (
@@ -42,16 +45,16 @@ export function WhyChooseFableFrame() {
               className="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
               {/* Image Section */}
-              <div className="h-32 sm:h-40 relative overflow-hidden">
+              <div className="h-72 sm:h-96 relative overflow-hidden">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} - Fable Frame`}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              
+
               {/* Content Section */}
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
